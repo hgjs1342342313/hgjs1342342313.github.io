@@ -9,7 +9,6 @@ description: 'Student at the University of California, Riverside'
 keywords:
 author: Zheming Kang
 language: en
-timezone: 'UTC - 8'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -105,7 +104,7 @@ deploy:
   type: git
   repository: https://github.com/hgjs1342342313/hgjs1342342313.github.io
   branch: master
-
+  message: Deploy to master
 # Menu
 menu:
   Index:
