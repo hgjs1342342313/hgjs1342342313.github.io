@@ -38,7 +38,7 @@
 <body>
   <header>
     <h1>Visualization of Rainfall and Traffic Accident in Hong Kong</h1>
-    <h2>Developed by Zheming, Tun Ho, Keqing, Xiaojian, Yulin</h2>
+    <h2>Developed by Zheming, Tsun Ho, Keqing, Xiaojian, Yulin</h2>
   </header>
 
   <div class="container">
@@ -78,6 +78,10 @@
       // 将 iframe 添加到内容容器中
       contentDiv.appendChild(iframe);
     }
+        // 页面加载完成后显示 rainfall.html
+    document.addEventListener("DOMContentLoaded", function() {
+      handleButtonClick("rainfall.html");
+    });
 
     // 绑定按钮点击事件处理函数
     rainfallButton.addEventListener("click", function() {
