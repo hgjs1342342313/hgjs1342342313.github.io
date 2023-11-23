@@ -50,7 +50,8 @@
       <button id="rainfallButton">Rainfall</button>
       <button id="accidentButton">Traffic Accident</button>
       <button id="tbdButton">Rainfall with Traffic-accident</button>
-      <button id="tbd2Button">Summary</button>
+      <button id="tbd2Button">Annual analysis</button>
+      <button id="summaryButton">Summary</button>
     </div>
     <div class="main-content" id="content">
       <!-- 初始的右侧盒子内容 -->
@@ -101,6 +102,9 @@
 
     tbd2Button.addEventListener("click", function() {
       handleButtonClick("tbd2.html");
+    });
+    summaryButton.addEventListener("click", function() {
+      handleButtonClick("summary.html");
     });
   </script>
 </body>
