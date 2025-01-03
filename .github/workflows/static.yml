@@ -23,37 +23,30 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: npx nuxt build --preset github-pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with: 
+          path: '.next'
   deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
     environment:
-      name: github-pages
+      name: github_pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20' # 根据你的项目需求选择合适的 Node.js 版本
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build project
-        run: pnpm build # 确保你的项目有 build 命令
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # 上传构建生成的静态文件目录
-          path: '.next' # 根据你的 build 命令输出目录进行调整
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
