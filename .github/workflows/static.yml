@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # 上传构建生成的静态文件目录
-          path: 'out' # 根据你的 build 命令输出目录进行调整
+          path: '.next' # 根据你的 build 命令输出目录进行调整
 
       - name: Deploy to GitHub Pages
         id: deployment
