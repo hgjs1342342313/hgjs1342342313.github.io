@@ -36,6 +36,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20' # 根据你的项目需求选择合适的 Node.js 版本
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
 
       - name: Install dependencies
         run: pnpm install
