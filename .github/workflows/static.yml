@@ -33,7 +33,7 @@ jobs:
           node-version: '20'
       - run: npm install
       - run: npm install pnpm
-      - run: pnpm build
+      - run: yarn build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with: 
