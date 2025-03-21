@@ -20,7 +20,7 @@ const Content = styled.div`
   line-height: 1.8;
 `;
 
-function About() {
+const About: React.FC = () => {
   return (
     <AboutSection>
       <Title>关于我</Title>
@@ -31,6 +31,6 @@ function About() {
       </Content>
     </AboutSection>
   );
-}
+};
 
 export default About; 

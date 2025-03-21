@@ -43,7 +43,7 @@ const ContactLink = styled.a`
   }
 `;
 
-function Contact() {
+const Contact: React.FC = () => {
   return (
     <ContactSection>
       <Title>联系方式</Title>
@@ -69,6 +69,6 @@ function Contact() {
       </ContactInfo>
     </ContactSection>
   );
-}
+};
 
 export default Contact; 

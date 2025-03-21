@@ -20,13 +20,13 @@ const Subtitle = styled.p`
   opacity: 0.9;
 `;
 
-function Home() {
+const Home: React.FC = () => {
   return (
     <HeroSection>
       <Title>欢迎来到我的个人主页</Title>
       <Subtitle>这里是我展示作品和分享想法的地方</Subtitle>
     </HeroSection>
   );
-}
+};
 
 export default Home; 

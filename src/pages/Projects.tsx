@@ -52,7 +52,13 @@ const ProjectLink = styled.a`
   }
 `;
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  link: string;
+}
+
+const projects: Project[] = [
   {
     title: '项目一',
     description: '这是一个示例项目描述',
@@ -70,7 +76,7 @@ const projects = [
   }
 ];
 
-function Projects() {
+const Projects: React.FC = () => {
   return (
     <ProjectsSection>
       <Title>我的项目</Title>
@@ -85,6 +91,6 @@ function Projects() {
       </ProjectGrid>
     </ProjectsSection>
   );
-}
+};
 
 export default Projects; 
