@@ -23,8 +23,8 @@ const Subtitle = styled.p`
 const Home: React.FC = () => {
   return (
     <HeroSection>
-      <Title>欢迎来到我的个人主页</Title>
-      <Subtitle>这里是我展示作品和分享想法的地方</Subtitle>
+      <Title>鼠鼠我啊，才刚毕业捏</Title>
+      <Subtitle>工程之路就像爬天梯，什么时候才能P8+呢？</Subtitle>
     </HeroSection>
   );
 };

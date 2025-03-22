@@ -50,21 +50,21 @@ const Contact: React.FC = () => {
       <ContactInfo>
         <ContactItem>
           <ContactLabel>邮箱：</ContactLabel>
-          <ContactLink href="mailto:your.email@example.com">
-            your.email@example.com
+          <ContactLink href="sygradeandy@gmail.com">
+            sygradeandy[at]gmail[dot]com
           </ContactLink>
         </ContactItem>
         <ContactItem>
           <ContactLabel>GitHub：</ContactLabel>
-          <ContactLink href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-            @yourusername
+          <ContactLink href="https://github.com/hgjs1342342313" target="_blank" rel="noopener noreferrer">
+            @hgjs1342342313
           </ContactLink>
         </ContactItem>
         <ContactItem>
-          <ContactLabel>LinkedIn：</ContactLabel>
-          <ContactLink href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-            linkedin.com/in/yourusername
-          </ContactLink>
+          <ContactLabel>QQGroup：</ContactLabel>
+          <ContactLabel>
+            460811281
+          </ContactLabel>
         </ContactItem>
       </ContactInfo>
     </ContactSection>
